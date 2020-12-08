@@ -25,11 +25,9 @@ class App extends Component {
   componentDidMount() {
     const persistedContacts =
       JSON.parse(localStorage.getItem('contacts')) || newContacts;
-    if (persistedContacts) {
-      this.setState({
-        contacts: persistedContacts,
-      });
-    }
+    this.setState({
+      contacts: persistedContacts,
+    });
   }
 
   componentDidUpdate(prevState) {
