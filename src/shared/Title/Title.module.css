@@ -7,10 +7,12 @@
 }
 
 .appear {
+  opacity: 0;
   transform: translateY(-100%);
   transition: all 500ms linear;
 }
 
 .appearActive {
+  opacity: 1;
   transform: translateY(0);
 }
