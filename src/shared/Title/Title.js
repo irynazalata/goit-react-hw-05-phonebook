@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Title = ({ title }) => {
   return (
-    <CSSTransition in={true} timeout={500} classNames={styles}>
+    <CSSTransition in={true} appear={true} timeout={500} classNames={styles}>
       <h2 className={styles.title}>{title}</h2>
     </CSSTransition>
   );
