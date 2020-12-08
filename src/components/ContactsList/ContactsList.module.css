@@ -3,7 +3,6 @@
   list-style: square;
   padding-left: 10px;
 }
-
 .enter {
   opacity: 0;
   transform: translateX(-100%);

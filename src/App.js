@@ -4,6 +4,7 @@ import Form from './components/Form/Form';
 import ContactsList from './components/ContactsList/ContactsList';
 import Filter from './components/Filter/Filter';
 import Notification from './shared/Notification/Notification';
+import { CSSTransition } from 'react-transition-group';
 import './App.css';
 
 const newContacts = [
@@ -87,10 +88,12 @@ class App extends Component {
           value={filter}
           contacts={contacts}
         />
-        <ContactsList
-          searchContact={this.handleContactSearch()}
-          deleteContact={this.deleteContact}
-        />
+        <CSSTransition in={contacts.length > 0} timeout={0} unmountOnExit>
+          <ContactsList
+            searchContact={this.handleContactSearch()}
+            deleteContact={this.deleteContact}
+          />
+        </CSSTransition>
       </>
     );
   }
